@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sprint 3 de IA Agéntica aplicado a KraftPack Perú: razonamiento, herramientas simuladas y memoria a corto plazo.">
+  <title>Asistente Inteligente Comercial - KraftPack Perú</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <span class="brand-mark">KP</span>
+        <span>KraftPack Perú</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#funcionalidades">Funcionalidades</a></li>
+        <li><a href="#metodologia">Metodología</a></li>
+        <li><a href="#scrum">Scrum</a></li>
+        <li><a href="#historias">Historias</a></li>
+        <li><a href="#chat">Simulación</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="inicio">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Proyecto de IA Agéntica aplicado a KraftPack Perú</p>
+        <h1>Asistente Inteligente Comercial - KraftPack Perú</h1>
+        <h2>Sprint 3: Razonamiento y Herramientas</h2>
+        <p class="hero-text">
+          Desarrollo de un agente inteligente orientado a la atención comercial,
+          recomendación de empaques, consultas sobre productos kraft y solicitudes de cotización.
+        </p>
+        <div class="hero-actions" aria-label="Acciones principales">
+          <button class="btn btn-primary" data-target="funcionalidades">Ver funcionalidades</button>
+          <button class="btn btn-secondary" data-target="metodologia">Ver metodología</button>
+          <button class="btn btn-outline" data-target="historias">Ver historias de usuario</button>
+        </div>
+      </div>
+      <div class="hero-visual reveal" aria-label="Productos de packaging kraft">
+        <img src="assets/kraftpack-packaging.png" alt="Ilustración de bolsas, cajas y papel kraft para packaging sostenible">
+      </div>
+    </section>
+
+    <section class="section sprint-data" aria-labelledby="datos-sprint">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Datos del sprint</p>
+        <h2 id="datos-sprint">Resumen ejecutivo del incremento</h2>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card reveal">
+          <span>Proyecto</span>
+          <strong>IA Agéntica aplicada a KraftPack Perú</strong>
+        </article>
+        <article class="stat-card reveal">
+          <span>Sprint</span>
+          <strong>Sprint 3</strong>
+        </article>
+        <article class="stat-card reveal">
+          <span>Enfoque</span>
+          <strong>Razonamiento y Herramientas</strong>
+        </article>
+        <article class="stat-card reveal">
+          <span>Metodología</span>
+          <strong>CRISP-ML + Scrum</strong>
+        </article>
+        <article class="stat-card stat-card-wide reveal">
+          <span>Entregable</span>
+          <strong>Agente con herramientas simuladas y memoria a corto plazo</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section objective" aria-labelledby="objetivo">
+      <div class="objective-card reveal">
+        <div>
+          <p class="eyebrow">Objetivo del Sprint 3</p>
+          <h2 id="objetivo">Primera versión funcional del asistente comercial</h2>
+        </div>
+        <p>
+          El objetivo del Sprint 3 es implementar una primera versión funcional del asistente
+          inteligente comercial para KraftPack Perú, capaz de interpretar consultas de clientes,
+          recomendar productos de packaging, utilizar herramientas de apoyo y mantener memoria
+          temporal durante la conversación.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="funcionalidades">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Agente inteligente</p>
+        <h2>Funcionalidades principales</h2>
+        <p>Capacidades implementadas para apoyar la atención comercial de KraftPack Perú.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card reveal">
+          <span class="icon icon-products" aria-hidden="true"></span>
+          <h3>Consulta de productos</h3>
+          <p>Permite orientar al cliente sobre papel kraft, bolsas, cajas, envases y empaques sostenibles.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="icon icon-recommend" aria-hidden="true"></span>
+          <h3>Recomendación de empaques</h3>
+          <p>Sugiere alternativas según necesidad, tipo de negocio y uso esperado del packaging.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="icon icon-quote" aria-hidden="true"></span>
+          <h3>Cotización simulada</h3>
+          <p>Solicita producto, cantidad y medida para generar una orientación inicial.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="icon icon-stock" aria-hidden="true"></span>
+          <h3>Verificación de disponibilidad</h3>
+          <p>Simula la validación de stock referencial para atención comercial.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="icon icon-memory" aria-hidden="true"></span>
+          <h3>Memoria a corto plazo</h3>
+          <p>Mantiene el contexto reciente para dar continuidad a la conversación.</p>
+        </article>
+        <article class="feature-card reveal">
+          <span class="icon icon-error" aria-hidden="true"></span>
+          <h3>Consultas no reconocidas</h3>
+          <p>Entrega una respuesta clara cuando la solicitud no coincide con el dominio comercial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section tools" id="herramientas">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Sprint 3</p>
+        <h2>Herramientas simuladas</h2>
+        <p>Componentes de apoyo para evidenciar integración de herramientas sin backend.</p>
+      </div>
+      <div class="tools-grid">
+        <article class="tool-card reveal">
+          <span class="tool-number">01</span>
+          <h3>Catálogo de productos</h3>
+          <p>Permite consultar productos como papel kraft, bolsas, cajas, envases y empaques sostenibles.</p>
+        </article>
+        <article class="tool-card reveal">
+          <span class="tool-number">02</span>
+          <h3>Recomendador comercial</h3>
+          <p>Sugiere productos según la necesidad del cliente y el tipo de uso comercial.</p>
+        </article>
+        <article class="tool-card reveal">
+          <span class="tool-number">03</span>
+          <h3>Estimador básico de cotización</h3>
+          <p>Solicita cantidad, medida y tipo de producto para generar una orientación inicial.</p>
+        </article>
+        <article class="tool-card reveal">
+          <span class="tool-number">04</span>
+          <h3>Verificador de disponibilidad</h3>
+          <p>Simula la validación de productos disponibles para atención comercial.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section methodology" id="metodologia">
+      <div class="section-heading reveal">
+        <p class="eyebrow">CRISP-ML</p>
+        <h2>Relación metodológica</h2>
+        <p>Aplicación de las fases CRISP-ML al desarrollo del asistente comercial.</p>
+      </div>
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Comprensión del negocio</h3>
+          <p>Se identifica la necesidad de mejorar la atención comercial y orientación de clientes de KraftPack Perú.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Comprensión de datos</h3>
+          <p>Se analizan consultas de clientes, categorías de productos, intenciones y datos simulados del catálogo.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Preparación de datos</h3>
+          <p>Se organizan palabras clave, reglas de respuesta, categorías y flujos de consulta.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Modelado</h3>
+          <p>Se implementa el razonamiento básico del agente, detección de intención, selección de herramientas y generación de respuestas.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Evaluación</h3>
+          <p>Se prueban consultas relacionadas con papel kraft, bolsas, cajas, cotizaciones y productos ecológicos.</p>
+        </article>
+        <article class="timeline-item reveal">
+          <span></span>
+          <h3>Despliegue</h3>
+          <p>Se presenta una versión funcional del asistente y una página web informativa publicada en GitHub Pages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section scrum" id="scrum">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Scrum</p>
+        <h2>Relación con el desarrollo incremental</h2>
+      </div>
+      <div class="scrum-list reveal">
+        <article>
+          <h3>Historias de usuario</h3>
+          <p>Se definen necesidades del cliente y del administrador para guiar el incremento.</p>
+        </article>
+        <article>
+          <h3>Backlog del Sprint 3</h3>
+          <p>Se priorizan tareas de razonamiento, herramientas simuladas, memoria y validación funcional.</p>
+        </article>
+        <article>
+          <h3>Desarrollo incremental</h3>
+          <p>Se construye una primera versión demostrable del asistente comercial.</p>
+        </article>
+        <article>
+          <h3>Pruebas funcionales</h3>
+          <p>Se verifican consultas sobre productos, cotización, memoria y errores controlados.</p>
+        </article>
+        <article>
+          <h3>Review del Sprint</h3>
+          <p>Se presenta el resultado del sprint como evidencia de avance técnico y metodológico.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section stories" id="historias">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Backlog funcional</p>
+        <h2>Historias de usuario principales</h2>
+      </div>
+      <div class="story-grid">
+        <article class="story-card reveal">
+          <strong>HU-01</strong>
+          <p>Como cliente, quiero consultar productos de KraftPack para conocer opciones de empaques.</p>
+        </article>
+        <article class="story-card reveal">
+          <strong>HU-02</strong>
+          <p>Como cliente, quiero recibir recomendaciones de empaques según mi necesidad para elegir el producto adecuado.</p>
+        </article>
+        <article class="story-card reveal">
+          <strong>HU-03</strong>
+          <p>Como cliente, quiero solicitar una cotización para conocer una orientación inicial del producto requerido.</p>
+        </article>
+        <article class="story-card reveal">
+          <strong>HU-04</strong>
+          <p>Como administrador, quiero que el sistema conserve el contexto reciente para mejorar la atención del agente.</p>
+        </article>
+        <article class="story-card reveal">
+          <strong>HU-05</strong>
+          <p>Como cliente, quiero recibir una respuesta clara cuando mi consulta no sea reconocida para saber cómo continuar.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section chat-section" id="chat">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Simulación visual</p>
+        <h2>Ejemplo de interacción del agente</h2>
+        <p>Demostración sin backend, preparada para explicar el flujo comercial del Sprint 3.</p>
+      </div>
+      <div class="chat-window reveal" aria-label="Simulación de conversación entre usuario y agente">
+        <div class="chat-topbar">
+          <span></span>
+          <strong>Agente comercial KraftPack</strong>
+        </div>
+        <div class="message user">
+          <span>Usuario</span>
+          <p>Necesito papel kraft.</p>
+        </div>
+        <div class="message agent">
+          <span>Agente</span>
+          <p>Puedo ayudarte con opciones de papel kraft para empaques, envolturas o presentación de productos. Para recomendarte mejor, indícame el uso, medida aproximada y cantidad requerida.</p>
+        </div>
+        <div class="message user">
+          <span>Usuario</span>
+          <p>Quiero bolsas para delivery.</p>
+        </div>
+        <div class="message agent">
+          <span>Agente</span>
+          <p>Para delivery se pueden considerar bolsas kraft resistentes, bolsas con asa o empaques sostenibles según el tipo de producto. También puedo ayudarte con una cotización inicial.</p>
+        </div>
+        <div class="message user">
+          <span>Usuario</span>
+          <p>Necesito una cotización.</p>
+        </div>
+        <div class="message agent">
+          <span>Agente</span>
+          <p>Para realizar una cotización inicial, indícame el producto, cantidad, medida y si deseas impresión personalizada.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section result" id="resultado">
+      <div class="result-card reveal">
+        <p class="eyebrow">Resultado esperado</p>
+        <h2>Incremento funcional del Sprint 3</h2>
+        <p>
+          Al finalizar el Sprint 3 se obtiene una primera versión funcional del asistente inteligente comercial,
+          capaz de interpretar consultas, usar herramientas simuladas, recomendar productos y mantener memoria
+          a corto plazo durante la interacción.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>KraftPack Perú | Sprint 3 | CRISP-ML + Scrum | IA Agéntica</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
